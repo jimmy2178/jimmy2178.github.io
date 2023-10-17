@@ -1,35 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Simple Animation</title>
-<style>
-    body {
-        margin: 0;
-        overflow: hidden;
-    }
-    .square {
-        width: 50px;
-        height: 50px;
-        background-color: blue;
-        position: absolute;
-        animation: moveRight 5s infinite alternate;
-    }
-    @keyframes moveRight {
-        0% {
-            left: 0;
-            background-color: blue;
-        }
-        100% {
-            left: calc(100vw - 50px);
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First HTML with Animation</title>
+    <style>
+        #animatedSquare {
+            width: 50px;
+            height: 50px;
             background-color: red;
+            position: relative;
+            animation: moveAndChange 5s forwards;
         }
-    }
-</style>
+
+        @keyframes moveAndChange {
+            50% {
+                left: 200px;
+            }
+            100% {
+                left: 400px;
+                background-color: blue;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="square"></div>
-    <p>It is my second website</p>
+    <h1>It is my first html</h1>
+    <div id="animatedSquare"></div>
 </body>
 </html>
