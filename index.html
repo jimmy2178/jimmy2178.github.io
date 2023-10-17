@@ -4,30 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>First HTML with Looping Animation</title>
+    <title>Triangle Animation</title>
     <style>
-        #animatedSquare {
-            width: 50px;
-            height: 50px;
-            background-color: red;
+        #triangle {
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 100px solid red;
             position: relative;
-            animation: moveAndChange 5s infinite alternate; /* infinite makes it loop, alternate makes it go back and forth */
+            animation: moveAndChange 5s infinite alternate;
         }
 
         @keyframes moveAndChange {
             0% {
-                left: 0;
-                background-color: red;
+                top: 0;
+                border-bottom-color: red;
             }
             100% {
-                left: 400px;
-                background-color: blue;
+                top: 200px;
+                border-bottom-color: blue;
             }
         }
     </style>
 </head>
 <body>
-    <h1>It is my second html</h1>
-    <div id="animatedSquare"></div>
+    <h1>Jimmy</h1>
+    <div id="triangle"></div>
 </body>
 </html>
