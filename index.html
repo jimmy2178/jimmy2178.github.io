@@ -1,35 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Triangle Animation</title>
+    <title>DoTAI</title>
     <style>
-        #triangle {
-            width: 0;
-            height: 0;
-            border-left: 50px solid transparent;
-            border-right: 50px solid transparent;
-            border-bottom: 100px solid red;
-            position: relative;
-            animation: moveAndChange 5s infinite alternate;
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
-
-        @keyframes moveAndChange {
+        
+        @keyframes moveText {
             0% {
-                top: 0;
-                border-bottom-color: red;
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
             }
             100% {
-                top: 200px;
-                border-bottom-color: blue;
+                transform: translateY(0);
             }
+        }
+
+        #followText {
+            animation: moveText 2s infinite;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
         }
     </style>
 </head>
 <body>
-    <h1>Jimmy</h1>
-    <div id="triangle"></div>
+    <h1>DoTAI</h1>
+    <div id="followText">
+        <a href="https://instagram.com/dotai.hk">Follow Us</a>
+    </div>
 </body>
 </html>
